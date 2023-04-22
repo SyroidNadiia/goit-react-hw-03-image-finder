@@ -8,7 +8,7 @@ const ImageGallery = ({ pictures }) => {
       {pictures.hits.map(item => (
         <ImageGalleryItem
           key={item.id}
-          src={item.previewURL}
+          src={item.webformatURL}
           alt={item.pageURL}
         />
       ))}

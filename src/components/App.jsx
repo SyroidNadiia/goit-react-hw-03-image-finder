@@ -2,12 +2,15 @@ import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import { fetchAsync } from 'api/fetch';
 import React, { Component } from 'react';
+import Loader from './Loader/Loader';
+import Modal from './Modal/Modal';
 
 const INITIAL_STATE = {
   query: '',
   visibleModal: false,
   isLoading: false,
   isError: false,
+  showModal: false,
   pictures: [],
 };
 
@@ -31,17 +34,25 @@ class App extends Component {
   };
 
   async componentDidUpdate(prevProps, prevState) {
-    if (prevState.query !== this.state.query) {
+    if (prevState.query !== this.state.query && this.state.query !== '') {
       this.handelFetchImg(this.state.query);
     }
   }
 
   render() {
+    const { pictures, isLoading, showModal } = this.state;
     return (
       <>
         <Searchbar onSubmit={this.handleSearchSubmit}></Searchbar>
-        {this.state.pictures.length !== 0 && (
-          <ImageGallery pictures={this.state.pictures}></ImageGallery>
+        {pictures.length !== 0 && (
+          <ImageGallery pictures={pictures}></ImageGallery>
+        )}
+        {isLoading && <Loader></Loader>}
+        {showModal && (
+          <Modal
+            src={pictures.hits.largeImageURL}
+            alt={pictures.hits.pageURL}
+          ></Modal>
         )}
       </>
     );

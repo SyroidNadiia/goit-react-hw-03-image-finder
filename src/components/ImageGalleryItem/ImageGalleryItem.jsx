@@ -1,7 +1,9 @@
-const ImageGalleryItem = ({id, src, alt}) => {
+import css from './ImageGalleryItem.module.css';
+
+const ImageGalleryItem = ({ id, src, alt }) => {
   return (
-    <li className="gallery-item">
-      <img src={src} alt={alt} />
+    <li className={css.ImageGalleryItem}>
+      <img className={css['ImageGalleryItem-image']} src={src} alt={alt} />
     </li>
   );
 };

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { debounce } from 'lodash';
+import 'font-awesome/css/font-awesome.min.css';
+import PropTypes from 'prop-types';
 import css from './Searchbar.module.css';
 
 class Searchbar extends Component {
   state = {
     query: '',
+  };
+
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
   };
 
   handleInputChange = ({ target }) => {
@@ -23,12 +28,14 @@ class Searchbar extends Component {
       <header className={css.Searchbar}>
         <form className={css.SearchForm} onSubmit={this.handelSubmit}>
           <button type="submit" className={css['SearchForm-button']}>
+            <i className="fa fa-search"></i>
             <span className={css['SearchForm-button-label']}>Search</span>
           </button>
 
           <input
             className={css['SearchForm-input']}
-            onChange={debounce(this.handleInputChange, 1000)}
+            value={this.state.query}
+            onChange={this.handleInputChange}
             type="text"
             autoComplete="off"
             autoFocus

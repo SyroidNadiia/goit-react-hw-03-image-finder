@@ -11,11 +11,9 @@ const serchParams = new URLSearchParams({
   per_page: '12',
 });
 
-export const fetchAsync = async query => {
-  const url = `${BASE_URL}?key=${API_KEY}&q=${query}&page=${1}&${serchParams.toString()}`;
+export const fetchAsync = async (query, page) => {
+  const url = `${BASE_URL}?key=${API_KEY}&q=${query}&page=${page}&${serchParams.toString()}`;
 
- 
-    const { data } = await axios.get(url);
-    return data;
-  
+  const { data } = await axios.get(url);
+  return data;
 };

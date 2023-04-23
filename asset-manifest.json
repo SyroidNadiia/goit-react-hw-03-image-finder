@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-03-image-finder/static/css/main.0744406c.css",
-    "main.js": "/goit-react-hw-03-image-finder/static/js/main.12fb5999.js",
+    "main.css": "/goit-react-hw-03-image-finder/static/css/main.28531ea4.css",
+    "main.js": "/goit-react-hw-03-image-finder/static/js/main.55cbc478.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/goit-react-hw-03-image-finder/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/goit-react-hw-03-image-finder/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/goit-react-hw-03-image-finder/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/goit-react-hw-03-image-finder/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/goit-react-hw-03-image-finder/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/goit-react-hw-03-image-finder/index.html",
-    "main.0744406c.css.map": "/goit-react-hw-03-image-finder/static/css/main.0744406c.css.map",
-    "main.12fb5999.js.map": "/goit-react-hw-03-image-finder/static/js/main.12fb5999.js.map"
+    "main.28531ea4.css.map": "/goit-react-hw-03-image-finder/static/css/main.28531ea4.css.map",
+    "main.55cbc478.js.map": "/goit-react-hw-03-image-finder/static/js/main.55cbc478.js.map"
   },
   "entrypoints": [
-    "static/css/main.0744406c.css",
-    "static/js/main.12fb5999.js"
+    "static/css/main.28531ea4.css",
+    "static/js/main.55cbc478.js"
   ]
 }
